@@ -2,6 +2,14 @@ body {
   margin: 0;
   // height: 100vh;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+  -moz-appearance: textfield;
+}
 .FTACommunity {
   background-image: url("../assets/FtaCommunityBackgroundImg.png");
   //   max-width: 1920px;
@@ -408,11 +416,16 @@ body {
 }
 .DashBoardPage{
   background: #060829;
+  // height: 100vh;
   min-height:100vh;
   padding: 50px;
   gap: 30px;
   display: flex;
   font-family: "Roboto", serif;
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
   h1{
     color: #B4D5DC;
 margin: 0;
@@ -426,6 +439,7 @@ text-transform: capitalize;
 }
   }
   h2{
+    height: 23px;
     color: #B4D5DC;
 font-size: 20px;
 font-style: normal;
@@ -455,6 +469,10 @@ margin-bottom: 0;
     flex-direction: column;
     align-items: start;
 
+  }
+  .active{
+    border-radius: 30px;
+border: 1px solid #B4D5DC;
   }
   .sideBar2{
     display: none;
@@ -514,7 +532,7 @@ margin: 0;
 }
 button{
   display: flex;
-padding: 16px 20px;
+padding: 15px 20px;
 align-items: center;
 gap: 12px;
 align-self: stretch;
@@ -527,6 +545,10 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 text-transform: uppercase;
+border: 1px;
+&:focus{
+  box-shadow: none;
+}
 @media screen and (max-width:992px) {
   font-size: 14px;
 }
@@ -654,7 +676,7 @@ text-transform: uppercase;
       width: 2896px;
     }
     .card{
-      max-width: 304px;
+      max-width: 305px;
       width: 100%;
       padding: 15px;
       align-items: flex-start;
@@ -702,7 +724,7 @@ background: linear-gradient(90deg, #B4D5DC 0%, #D7786A 79.13%, #E5553F 100%);
   .GradeTwo{
 padding: 13px 16px;
 background: #B4D5DC;
-gap: 12px;
+gap:4px;
 p{
   font-size: 16px;
 }
@@ -714,27 +736,27 @@ text-align: center;
 p{
   color: #fff;
 }
-  }
+}
 }
 .WeeklySectionScroll{
-  scrollbar-width: thin;
-  scrollbar-color: #ff0000;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding-bottom: 40px;
   &::-webkit-scrollbar {
-    width: 12px;
-    height: 12px; 
+    height: 12px;
+    width: 0px;
   }
-
   &::-webkit-scrollbar-track {
     border-radius: 100px;
     background: #111455;
   }
-
   &::-webkit-scrollbar-thumb {
     border-radius: 100px;
-    background: #0C1174;
+    background: #0C1174; 
   }
-   &::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+  &::-webkit-scrollbar-thumb:hover {
+    border-radius: 100px;
+    background: #0C1174; 
   }
 }
   }
