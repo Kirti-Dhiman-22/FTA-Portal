@@ -241,7 +241,8 @@ input[type=number] {
     width: 12px;
   }
 }
-.FTACommunity .InnerPage p, .FTACommunity .InnerPage li {
+.FTACommunity .InnerPage p,
+.FTACommunity .InnerPage li {
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
   font-family: "Roboto", serif;
@@ -251,11 +252,13 @@ input[type=number] {
   line-height: 25px;
   margin: 0;
 }
-.FTACommunity .InnerPage p span, .FTACommunity .InnerPage li span {
+.FTACommunity .InnerPage p span,
+.FTACommunity .InnerPage li span {
   color: #fff;
 }
 @media screen and (max-width: 992px) {
-  .FTACommunity .InnerPage p, .FTACommunity .InnerPage li {
+  .FTACommunity .InnerPage p,
+  .FTACommunity .InnerPage li {
     font-size: 12px;
     line-height: 15px;
   }
@@ -364,11 +367,13 @@ input[type=number] {
     gap: 10px;
   }
 }
-.FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara, .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li {
+.FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara,
+.FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li {
   font-size: 14px;
   line-height: normal;
 }
-.FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara span, .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li span {
+.FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara span,
+.FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li span {
   color: rgba(255, 255, 255, 0.7);
   font-family: "Roboto", serif;
   font-size: 14px;
@@ -384,10 +389,12 @@ input[type=number] {
   text-underline-position: from-font;
 }
 @media screen and (max-width: 575px) {
-  .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara, .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li {
+  .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara,
+  .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li {
     font-size: 12px;
   }
-  .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara span, .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li span {
+  .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton .requirementButtonPara span,
+  .FTACommunity .InnerPage .InnerPageButtonSection.requirementButton li span {
     font-size: 12px;
   }
 }
@@ -509,12 +516,28 @@ input[type=number] {
   display: flex;
   font-family: "Roboto", serif;
 }
+@media screen and (max-height: 1079px) {
+  .DashBoardPage {
+    padding: 30px;
+  }
+}
+@media screen and (max-height: 990px) {
+  .DashBoardPage {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage {
+    gap: 15px;
+    padding: 30px;
+  }
+}
 .DashBoardPage a {
   color: inherit;
   text-decoration: none;
 }
 .DashBoardPage h1 {
-  color: #B4D5DC;
+  color: #b4d5dc;
   margin: 0;
   font-size: 56px;
   font-style: normal;
@@ -522,14 +545,14 @@ input[type=number] {
   line-height: normal;
   text-transform: capitalize;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .DashBoardPage h1 {
     font-size: 30px;
   }
 }
 .DashBoardPage h2 {
   height: 23px;
-  color: #B4D5DC;
+  color: #b4d5dc;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -537,13 +560,13 @@ input[type=number] {
   text-transform: uppercase;
   margin: 0;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .DashBoardPage h2 {
     font-size: 16px;
   }
 }
 .DashBoardPage p {
-  color: #B4D5DC;
+  color: #b4d5dc;
   text-align: center;
   font-size: 18px;
   font-style: normal;
@@ -552,7 +575,7 @@ input[type=number] {
   text-transform: capitalize;
   margin-bottom: 0;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   .DashBoardPage p {
     font-size: 14px;
   }
@@ -564,15 +587,17 @@ input[type=number] {
 }
 .DashBoardPage .active {
   border-radius: 30px;
-  border: 1px solid #B4D5DC;
+  border: 1px solid #b4d5dc;
 }
 .DashBoardPage .sideBar2 {
   display: none;
+  max-width: 270px;
 }
 .DashBoardPage .sideBar2 .offcanvas-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0;
 }
 .DashBoardPage .sideBar2 button.text-reset {
   background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"%3E%3Cpath fill="none" stroke="%23fff" stroke-linecap="round" stroke-linejoin="round" d="m15.5 15.5l-10-10zm0-10l-10 10" stroke-width="1"/%3E%3C/svg%3E');
@@ -583,6 +608,12 @@ input[type=number] {
 }
 .DashBoardPage .sideBar2 button {
   display: none;
+  padding: 0;
+  border: none;
+}
+.DashBoardPage .sideBar2 button:focus {
+  outline: none;
+  box-shadow: none;
 }
 @media screen and (max-width: 1200px) {
   .DashBoardPage .sideBar2 {
@@ -605,7 +636,7 @@ input[type=number] {
   align-items: center;
   flex-shrink: 0;
   border-radius: 30px;
-  background: linear-gradient(180deg, #090B3B 0%, #0B1176 100%);
+  background: linear-gradient(180deg, #090b3b 0%, #0b1176 100%);
 }
 @media screen and (max-width: 1200px) {
   .DashBoardPage .sideBar {
@@ -613,7 +644,7 @@ input[type=number] {
   }
 }
 .DashBoardPage .sideBar h1 {
-  color: #FFF;
+  color: #fff;
   font-family: "Roboto", serif;
   font-size: 24px;
   font-style: normal;
@@ -634,7 +665,7 @@ input[type=number] {
   gap: 12px;
   align-self: stretch;
   text-align: center;
-  color: #B4D5DC;
+  color: #b4d5dc;
   text-align: center;
   font-family: "Roboto", serif;
   font-size: 18px;
@@ -673,7 +704,13 @@ input[type=number] {
 }
 @media screen and (max-width: 1200px) {
   .DashBoardPage .DashBoardInnerPage {
-    max-width: 100%;
+    max-width: calc(100% - 76px);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .DashBoardPage .DashBoardInnerPage {
+    gap: 15px;
   }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 {
@@ -682,35 +719,93 @@ input[type=number] {
   gap: 30px;
   flex-shrink: 0;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 {
+    gap: 20px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeSection {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: calc(100% - 480px);
+  max-width: calc(100% - 520px);
   gap: 30px;
+}
+@media screen and (max-width: 1400px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeSection {
+    max-width: calc(100% - 350px);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeSection {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeSection {
+    max-width: calc(100% - 250px);
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent {
   border-radius: 30px;
-  background: #090B3B;
+  background: #090b3b;
   padding: 20px 30px;
   width: 100%;
   gap: 45px;
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-height: 1045px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent {
+    gap: 30px;
+    padding: 15px 30px;
+  }
+}
+@media screen and (max-height: 990px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent {
+    gap: 20px;
+    padding: 10px 30px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent {
+    padding: 10px 20px;
+    gap: 30px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
   max-width: 450px;
   width: 100%;
+}
+@media screen and (max-width: 1400px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
+    max-width: 350px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
+    max-width: 250px;
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeHeadContent {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeHeadContent svg {
+    height: 50px;
+    width: 50px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeParaContent {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeParaContent.GradeScroll {
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeLogo {
   margin-left: -1px;
@@ -723,15 +818,27 @@ input[type=number] {
   border-radius: 50%;
   padding: 12px;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeLogo {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .Grades {
   display: flex;
   padding: 0px 30px 0px 0px;
   align-items: center;
   gap: 16px;
   border-radius: 30px;
-  background: #F3B8AF;
+  background: #f3b8af;
   box-shadow: 0px 6px 51.2px 0px rgba(6, 8, 41, 0.38);
   border: none;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .Grades {
+    gap: 12px;
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .Grades p {
   color: #060829;
@@ -747,9 +854,19 @@ input[type=number] {
   border-radius: 30px;
   background: rgba(11, 17, 114, 0.5);
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText {
+    padding: 8px 10px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText.WeeklyText p {
   color: rgba(229, 85, 63, 0.8);
   font-size: 16px;
+}
+@media screen and (max-width: 1025px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText.WeeklyText p {
+    font-size: 14px;
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText .card-innerLogo {
   width: 24px;
@@ -761,7 +878,7 @@ input[type=number] {
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText .card-innerLogo.WeeklyLogo {
   height: 33px;
   width: 33px;
-  background-color: #E5553F;
+  background-color: #e5553f;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText p {
   font-size: 14px;
@@ -770,11 +887,14 @@ input[type=number] {
   display: flex;
   gap: 16px;
 }
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group.GradeCardGroup {
+  width: 994px;
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group.WeekSection {
   width: 2896px;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card {
-  max-width: 305px;
+  max-width: 304px;
   width: 100%;
   padding: 15px;
   align-items: flex-start;
@@ -784,20 +904,29 @@ input[type=number] {
   border: 1px solid rgba(180, 213, 220, 0.3);
   background-color: transparent;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card {
+    padding: 10px;
+    gap: 10px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card .card-text {
   align-items: center;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card .card-text span > p {
   font-size: 24px;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card .card-text span > p {
+    font-size: 20px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card.WeeklyCard {
   max-width: 400px;
   width: 100%;
 }
-@media screen and (max-width: 1730px) {
-  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection {
-    flex-wrap: wrap;
-  }
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection {
+  width: 944px;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeBottomLogo {
   height: 33px;
@@ -812,22 +941,43 @@ input[type=number] {
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne {
   padding: 13px 30px;
-  max-width: 449px;
   height: 60px;
-  width: 100%;
   justify-content: space-between;
-  background: linear-gradient(90deg, #B4D5DC 0%, #D7786A 79.13%, #E5553F 100%);
+  background: linear-gradient(90deg, #b4d5dc 0%, #d7786a 79.13%, #e5553f 100%);
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne {
+    height: auto;
+    padding: 5px 10px;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne p {
+    font-size: 16px !important;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne span {
+    padding-right: 5px !important;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne span p {
+    font-size: 20px !important;
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeTwo {
   padding: 13px 16px;
-  background: #B4D5DC;
+  background: #b4d5dc;
   gap: 4px;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeTwo p {
   font-size: 16px;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeTwo {
+    padding: 5px 10px;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeTwo p {
+    font-size: 14px !important;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeFour {
-  background: #E5553F;
+  background: #e5553f;
   align-items: center;
   text-align: center;
 }
@@ -839,6 +989,11 @@ input[type=number] {
   overflow-y: hidden;
   padding-bottom: 40px;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .WeeklySectionScroll {
+    padding-bottom: 20px;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .WeeklySectionScroll::-webkit-scrollbar {
   height: 12px;
   width: 0px;
@@ -849,9 +1004,249 @@ input[type=number] {
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .WeeklySectionScroll::-webkit-scrollbar-thumb {
   border-radius: 100px;
-  background: #0C1174;
+  background: #0c1174;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .WeeklySectionScroll::-webkit-scrollbar-thumb:hover {
   border-radius: 100px;
-  background: #0C1174;
+  background: #0c1174;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.GradeTabHeadSection {
+  flex-direction: row;
+  justify-content: space-between;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 0 23px 0;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner {
+    gap: 8px;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent {
+  height: 710px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent {
+    height: 500px;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table {
+  width: 100%;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  border-bottom: 0.5px solid rgba(180, 213, 220, 0.3);
+  padding: 10px 0;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr .tableData1 {
+  padding: 0 24px 0 7px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr .tableData2 {
+  font-weight: 400;
+  padding: 0 24px;
+  border-right: 0.5px solid rgba(180, 213, 220, 0.3);
+  border-left: 0.5px solid rgba(180, 213, 220, 0.3);
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr .detailTableData2 {
+  border-right: none;
+  font-size: 16px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr .tableData3 {
+  padding: 0 0 0 24px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowSvg {
+  width: 40px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowSvg.TableRowSvg2 {
+  background-color: #ff0000;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowSvg.TableRowSvg3 {
+  background-color: #008cff;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowSvg.TableRowSvg4 {
+  background-color: #ffee00;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndBoxContent {
+  font-weight: 800;
+  border-radius: 6px;
+  background: #2c2941;
+  padding: 10px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndContent {
+  font-size: 24px;
+  font-weight: 800;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr {
+  padding: 7px 0 8px 0;
+  border-top: 0.5px solid rgba(180, 213, 220, 0.3);
+  border-bottom: none;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.DetailTableRow {
+  padding: 7px 0 24px 0;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.DetailTableRow {
+    padding: 5px 0 12px 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr {
+    padding: 4px 0;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailNotesContent {
+  padding: 16px 0 8px 0;
+  border: none;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailNotesContent {
+    padding: 8px 0 4px 0;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailNotesContent p {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.DetailRowData-NotesSvg {
+  padding-bottom: 16px;
+  border: none;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.DetailRowData-NotesSvg {
+    padding-bottom: 8px;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailsTableHeading {
+  padding: 30px 0 8px 0;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailsTableHeading {
+    padding: 15px 0 4px 0;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailsTableHeadingChange {
+  padding: 30px 0 16px 0;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr.GradeDetailsTableHeadingChange {
+    padding: 15px 0 8px 0;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr .tableData1 {
+  padding: 0 24px 0 12px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent.GradeDetailContent table tr td .TableRowSvg {
+  background-color: transparent;
+  height: 24px;
+  width: 24px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeTabScroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 32px;
+  padding-bottom: 0;
+  padding-top: 3px;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeTabScroll {
+    padding-right: 20px;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeTabScroll::-webkit-scrollbar {
+  width: 12px;
+  height: 0px;
+}
+.DashBoardPage .DashBoardInnerPage .DashboardFooterSection h2 {
+  width: 371px;
+}
+.DashBoardPage .DashBoardInnerPage .DashboardFooterSection p {
+  width: 290px;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashboardFooterSection {
+    gap: 10px !important;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashboardFooterSection h2 {
+    font-size: 14px;
+    width: 270px;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashboardFooterSection p {
+    margin-left: 0 !important;
+    font-size: 12px !important;
+  }
+  .DashBoardPage .DashBoardInnerPage .DashboardFooterSection span svg {
+    height: 40px;
+    width: 80px;
+  }
+}
+.DashBoardPage .GradeDetailFooter {
+  max-width: 100%;
+  border-radius: 30px;
+  background: #B4D5DC;
+  box-shadow: 0px 6px 51.2px 0px rgba(6, 8, 41, 0.38);
+  display: flex;
+  padding: 11px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .GradeDetailFooter {
+    padding: 8px 20px;
+  }
+}
+.DashBoardPage .GradeDetailFooter .detailFooterSvg {
+  height: 33px;
+  width: 33px;
+  background-color: #060829;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DashBoardPage .GradeDetailFooter .DetailFooterSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.DashBoardPage .GradeDetailFooter .DetailFooterSection span {
+  display: flex;
+  gap: 30px;
+}
+.DashBoardPage .GradeDetailFooter .DetailFooterSection h2 {
+  color: #060829;
+  height: auto;
+  font-weight: 900;
+}
+.DashBoardPage .GradeDetailFooter .DetailFooterSection .FooterSectionSpan1 {
+  color: #0A1857;
+  font-weight: 800;
+}
+.DashBoardPage .GradeDetailFooter .DetailFooterSection .FooterSectionSpan2 h2 {
+  font-size: 32px;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .GradeDetailFooter .DetailFooterSection .FooterSectionSpan2 h2 {
+    font-size: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
