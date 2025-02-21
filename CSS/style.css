@@ -508,6 +508,51 @@ input[type=number] {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.FTACommunity .classStudentPopup {
+  border-radius: 22px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(20.3999996185px);
+          backdrop-filter: blur(20.3999996185px);
+  max-height: 100vh;
+}
+@media screen and (max-width: 1200px) {
+  .FTACommunity .classStudentPopup {
+    max-width: 500px;
+  }
+}
+.FTACommunity .classStudentPopup p,
+.FTACommunity .classStudentPopup li {
+  line-height: normal;
+}
+.FTACommunity .classStudentPopup .classBodyContent {
+  border-radius: 22px;
+  border: 1px solid rgba(180, 213, 220, 0.3);
+  padding: 16px;
+}
+.FTACommunity .classStudentPopup .classStudentSvgBg {
+  height: 33px;
+  width: 33px;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.FTACommunity .classStudentPopup .classStudentSvgBg .classStudentInnerSvgBg {
+  color: #060829;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+.FTACommunity .classStudentPopup .classPopupButton button {
+  padding: 19px;
+}
+.FTACommunity .classStudentPopup .classStudentInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
 .DashBoardPage {
   background: #060829;
   min-height: 100vh;
@@ -550,7 +595,7 @@ input[type=number] {
     font-size: 30px;
   }
 }
-.DashBoardPage h2 {
+.DashBoardPage h2, .DashBoardPage .selectLabel {
   height: 23px;
   color: #b4d5dc;
   font-size: 20px;
@@ -561,11 +606,11 @@ input[type=number] {
   margin: 0;
 }
 @media screen and (max-width: 1200px) {
-  .DashBoardPage h2 {
+  .DashBoardPage h2, .DashBoardPage .selectLabel {
     font-size: 16px;
   }
 }
-.DashBoardPage p {
+.DashBoardPage p, .DashBoardPage .selectOptions {
   color: #b4d5dc;
   text-align: center;
   font-size: 18px;
@@ -576,7 +621,7 @@ input[type=number] {
   margin-bottom: 0;
 }
 @media screen and (max-width: 1200px) {
-  .DashBoardPage p {
+  .DashBoardPage p, .DashBoardPage .selectOptions {
     font-size: 14px;
   }
 }
@@ -641,6 +686,11 @@ input[type=number] {
 @media screen and (max-width: 1200px) {
   .DashBoardPage .sideBar {
     display: none;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .DashBoardPage .sideBar {
+    max-width: 326px;
   }
 }
 .DashBoardPage .sideBar h1 {
@@ -724,6 +774,16 @@ input[type=number] {
     gap: 20px;
   }
 }
+@media screen and (min-height: 769px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 {
+    height: calc(100vh - 180px);
+  }
+}
+@media screen and (min-height: 769px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1.DashBoardGradeDetailPage {
+    height: calc(100vh - 180px);
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeSection {
   display: flex;
   flex-direction: column;
@@ -773,9 +833,35 @@ input[type=number] {
     gap: 30px;
   }
 }
+@media screen and (min-height: 769px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent {
+    height: calc(100vh - 180px);
+  }
+}
+@media screen and (max-height: 768px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.GradeDetailInner {
+    height: calc(100vh - 180px);
+  }
+}
+@media screen and (min-height: 769px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.GradeDetailInner {
+    height: 100%;
+  }
+}
+@media screen and (min-height: 768px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.GradeInnerSection1,
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeInnerSection2 {
+    height: 50%;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
   max-width: 450px;
   width: 100%;
+}
+@media screen and (min-height: 1080px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
+    height: 100%;
+  }
 }
 @media screen and (max-width: 1400px) {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
@@ -786,6 +872,9 @@ input[type=number] {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.TodaySection {
     max-width: 250px;
   }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent.ClassInnerContent {
+  padding: 20px 30px 43px 30px;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeHeadContent {
   display: flex;
@@ -883,12 +972,59 @@ input[type=number] {
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-innerText p {
   font-size: 14px;
 }
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
+  height: 732px;
+}
+@media screen and (min-height: 768px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
+    height: 500px;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 22px;
+  padding-bottom: 0;
+  padding-top: 3px;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
+    padding-right: 20px;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody::-webkit-scrollbar {
+  width: 12px;
+  height: 0px;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody::-webkit-scrollbar-track {
+  border-radius: 100px;
+  background: #111455;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #0c1174;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody::-webkit-scrollbar-thumb:hover {
+  border-radius: 100px;
+  background: #0c1174;
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group {
   display: flex;
   gap: 16px;
+  height: 100%;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group.GradeCardGroup {
   width: 994px;
+}
+@media screen and (min-width: 1920px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group.GradeCardGroup {
+    width: 1433px;
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group.WeekSection {
   width: 2896px;
@@ -903,6 +1039,11 @@ input[type=number] {
   border-radius: 22px;
   border: 1px solid rgba(180, 213, 220, 0.3);
   background-color: transparent;
+}
+@media screen and (min-width: 1920px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card {
@@ -925,8 +1066,16 @@ input[type=number] {
   max-width: 400px;
   width: 100%;
 }
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .card-group .card.WeeklyCardClassTab {
+  max-width: 100%;
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection {
   width: 944px;
+}
+@media screen and (min-width: 1920px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection {
+    width: 1011px;
+  }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeBottomLogo {
   height: 33px;
@@ -944,6 +1093,12 @@ input[type=number] {
   height: 60px;
   justify-content: space-between;
   background: linear-gradient(90deg, #b4d5dc 0%, #d7786a 79.13%, #e5553f 100%);
+}
+@media screen and (min-width: 1920px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 1200px) {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .GradeBottomSection .GradeOne {
@@ -1025,6 +1180,16 @@ input[type=number] {
     gap: 8px;
   }
 }
+@media screen and (max-height: 1079px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner {
+    height: 84%;
+  }
+}
+@media screen and (min-height: 1080px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner {
+    height: 88%;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent {
   height: 710px;
   overflow-y: scroll;
@@ -1035,6 +1200,21 @@ input[type=number] {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent {
     height: 500px;
   }
+}
+@media screen and (min-height: 768px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent {
+    height: auto;
+  }
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent .SelectBelt .selectOptions {
+  background-color: transparent;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent .SelectBelt .selectOptions:hover {
+  background-color: transparent;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent .custom-optgroup {
+  background-color: #222;
+  color: white;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table {
   width: 100%;
@@ -1088,10 +1268,28 @@ input[type=number] {
   background-color: #ffee00;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndBoxContent {
-  font-weight: 800;
   border-radius: 6px;
   background: #2c2941;
-  padding: 10px;
+  width: 41px;
+  height: 41px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: capitalize;
+  border: none;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndBoxContent::-moz-placeholder {
+  color: #fff;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndBoxContent::placeholder {
+  color: #fff;
+}
+.DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndBoxContent:focus {
+  box-shadow: none;
+  outline: none;
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeBodyContent table tr td .TableRowEndContent {
   font-size: 24px;
@@ -1173,6 +1371,11 @@ input[type=number] {
     padding-right: 20px;
   }
 }
+@media screen and (min-height: 768px) {
+  .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeTabScroll {
+    height: 100%;
+  }
+}
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeTabSectionInner .GradeTabScroll::-webkit-scrollbar {
   width: 12px;
   height: 0px;
@@ -1203,7 +1406,7 @@ input[type=number] {
 .DashBoardPage .GradeDetailFooter {
   max-width: 100%;
   border-radius: 30px;
-  background: #B4D5DC;
+  background: #b4d5dc;
   box-shadow: 0px 6px 51.2px 0px rgba(6, 8, 41, 0.38);
   display: flex;
   padding: 11px 30px;
@@ -1239,7 +1442,7 @@ input[type=number] {
   font-weight: 900;
 }
 .DashBoardPage .GradeDetailFooter .DetailFooterSection .FooterSectionSpan1 {
-  color: #0A1857;
+  color: #0a1857;
   font-weight: 800;
 }
 .DashBoardPage .GradeDetailFooter .DetailFooterSection .FooterSectionSpan2 h2 {

@@ -434,6 +434,53 @@ input[type="number"] {
       }
     }
   }
+  .classStudentPopup {
+    border-radius: 22px;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    backdrop-filter: blur(20.399999618530273px);
+    max-height: 100vh;
+    @media screen and (max-width: 1200px) {
+      max-width: 500px;
+    }
+    p,
+    li {
+      line-height: normal;
+    }
+    .classBodyContent {
+      border-radius: 22px;
+      border: 1px solid rgba(180, 213, 220, 0.3);
+      padding: 16px;
+    }
+    .classStudentSvgBg {
+      height: 33px;
+      width: 33px;
+      display: flex;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      .classStudentInnerSvgBg {
+        color: #060829;
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+    .classPopupButton {
+      button {
+        padding: 19px;
+      }
+    }
+    .classStudentInner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+  }
 }
 .DashBoardPage {
   background: #060829;
@@ -469,7 +516,7 @@ input[type="number"] {
       font-size: 30px;
     }
   }
-  h2 {
+  h2,.selectLabel{
     height: 23px;
     color: #b4d5dc;
     font-size: 20px;
@@ -482,7 +529,7 @@ input[type="number"] {
       font-size: 16px;
     }
   }
-  p {
+  p,.selectOptions{
     color: #b4d5dc;
     text-align: center;
     font-size: 18px;
@@ -552,6 +599,9 @@ input[type="number"] {
     background: linear-gradient(180deg, #090b3b 0%, #0b1176 100%);
     @media screen and (max-width: 1200px) {
       display: none;
+    }
+    @media screen and (min-width: 1920px) {
+      max-width: 326px;
     }
     h1 {
       color: #fff;
@@ -623,6 +673,14 @@ input[type="number"] {
       @media screen and (max-width: 1200px) {
         gap: 20px;
       }
+      @media screen and (min-height: 769px) {
+        height: calc(100vh - 180px);
+      }
+      &.DashBoardGradeDetailPage {
+        @media screen and (min-height: 769px) {
+          height: calc(100vh - 180px);
+        }
+      }
       .GradeSection {
         display: flex;
         flex-direction: column;
@@ -659,15 +717,38 @@ input[type="number"] {
           padding: 10px 20px;
           gap: 30px;
         }
+        @media screen and (min-height: 769px) {
+          height: calc(100vh - 180px);
+        }
+        &.GradeDetailInner {
+          @media screen and (max-height: 768px) {
+            height: calc(100vh - 180px);
+          }
+          @media screen and (min-height: 769px) {
+            height: 100%;
+          }
+        }
+        &.GradeInnerSection1,
+        .GradeInnerSection2 {
+          @media screen and (min-height: 768px) {
+            height: calc(100% - 50%);
+          }
+        }
         &.TodaySection {
           max-width: 450px;
           width: 100%;
+          @media screen and (min-height: 1080px) {
+            height: 100%;
+          }
           @media screen and (max-width: 1400px) {
             max-width: 350px;
           }
           @media screen and (max-width: 992px) {
             max-width: 250px;
           }
+        }
+        &.ClassInnerContent {
+          padding: 20px 30px 43px 30px;
         }
         .GradeHeadContent {
           display: flex;
@@ -760,12 +841,52 @@ input[type="number"] {
             font-size: 14px;
           }
         }
+        .StudentContentBody {
+          height: 732px;
+          @media screen and (min-height: 768px) {
+            height: 100%;
+          }
+          @media screen and (max-width: 1200px) {
+            height: 500px;
+          }
+        }
+        .StudentContentBody {
+          overflow-y: scroll;
+          overflow-x: hidden;
+          padding-right: 22px;
+          padding-bottom: 0;
+          padding-top: 3px;
+          @media screen and (max-width: 1200px) {
+            padding-right: 20px;
+          }
 
+          &::-webkit-scrollbar {
+            width: 12px;
+            height: 0px;
+          }
+          &::-webkit-scrollbar-track {
+            border-radius: 100px;
+            background: #111455;
+          }
+          &::-webkit-scrollbar-thumb {
+            border-radius: 100px;
+            background: #0c1174;
+          }
+          &::-webkit-scrollbar-thumb:hover {
+            border-radius: 100px;
+            background: #0c1174;
+          }
+        }
         .card-group {
           display: flex;
           gap: 16px;
+          height: 100%;
           &.GradeCardGroup {
             width: 994px;
+            @media screen and (min-width: 1920px) {
+              width: 1433px;
+              // justify-content: stretch;
+            }
           }
           &.WeekSection {
             width: 2896px;
@@ -780,6 +901,9 @@ input[type="number"] {
             border-radius: 22px;
             border: 1px solid rgba(180, 213, 220, 0.3);
             background-color: transparent;
+            @media screen and (min-width: 1920px) {
+              max-width: 100%;
+            }
             @media screen and (max-width: 1200px) {
               padding: 10px;
               gap: 10px;
@@ -797,10 +921,16 @@ input[type="number"] {
               max-width: 400px;
               width: 100%;
             }
+            &.WeeklyCardClassTab {
+              max-width: 100%;
+            }
           }
         }
         .GradeBottomSection {
           width: 944px;
+          @media screen and (min-width: 1920px) {
+            width: 1011px;
+          }
           .GradeBottomLogo {
             height: 33px;
             width: 33px;
@@ -822,6 +952,10 @@ input[type="number"] {
               #d7786a 79.13%,
               #e5553f 100%
             );
+            @media screen and (min-width: 1920px) {
+              max-width: 100%;
+              width: 100%;
+            }
             @media screen and (max-width: 1200px) {
               height: auto;
               padding: 5px 10px;
@@ -888,7 +1022,6 @@ input[type="number"] {
           justify-content: space-between;
           // width: auto;
         }
-      
       }
 
       .GradeTabSectionInner {
@@ -896,20 +1029,42 @@ input[type="number"] {
         flex-direction: column;
         gap: 16px;
         padding: 0 0 23px 0;
-        @media screen and (max-width:1200px) {
+        @media screen and (max-width: 1200px) {
           gap: 8px;
+        }
+        @media screen and (max-height: 1079px) {
+          height: 84%;
+        }
+        @media screen and (min-height: 1080px) {
+          height: 88%;
         }
         .GradeBodyContent {
           height: 710px;
           overflow-y: scroll;
           overflow-x: hidden;
           width: 100%;
-          @media screen and (max-width:1200px) {
+          @media screen and (max-width: 1200px) {
             height: 500px;
           }
+          @media screen and (min-height: 768px) {
+            height: auto;
+          }
+          .SelectBelt{
+            .selectOptions{
+              background-color: transparent;
+            &:hover{
+              background-color: transparent;
+            }
+            }
+
+          }
+          .custom-optgroup {
+            background-color: #222;
+            color: white;
+        }
           table {
             width: 100%;
-            tr {
+            tr{
               width: 100%;
               display: flex;
               justify-content: space-between;
@@ -956,10 +1111,26 @@ input[type="number"] {
                   }
                 }
                 .TableRowEndBoxContent {
-                  font-weight: 800;
                   border-radius: 6px;
                   background: #2c2941;
-                  padding: 10px;
+                  width: 41px;
+                  height: 41px;
+                  // padding: 10px;
+                    color: #fff;
+                    text-align: center;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal;
+                    text-transform: capitalize;
+                    border: none;
+                    &::placeholder{
+                      color: #fff;
+                    }
+                    &:focus{
+                      box-shadow: none;
+                      outline: none;
+                    }
                 }
                 .TableRowEndContent {
                   font-size: 24px;
@@ -974,54 +1145,54 @@ input[type="number"] {
                 padding: 7px 0 8px 0;
                 border-top: 0.5px solid rgba(180, 213, 220, 0.3);
                 border-bottom: none;
-                &.DetailTableRow{
+                &.DetailTableRow {
                   padding: 7px 0 24px 0;
-                  @media screen and (max-width:1200px) {
+                  @media screen and (max-width: 1200px) {
                     padding: 5px 0 12px 0;
                   }
                 }
-                @media screen and (max-width:1200px) {
+                @media screen and (max-width: 1200px) {
                   padding: 4px 0;
                 }
-                &.GradeDetailNotesContent{
+                &.GradeDetailNotesContent {
                   padding: 16px 0 8px 0;
-                   border: none;
-                   @media screen and (max-width:1200px) {
+                  border: none;
+                  @media screen and (max-width: 1200px) {
                     padding: 8px 0 4px 0;
                   }
-                   p{
-                    font-weight: 700; 
+                  p {
+                    font-weight: 700;
                     text-transform: uppercase;
-                   }
+                  }
                 }
-                &.DetailRowData-NotesSvg{
-                  padding-bottom: 16px; 
+                &.DetailRowData-NotesSvg {
+                  padding-bottom: 16px;
                   border: none;
-                  @media screen and (max-width:1200px) {
-                    padding-bottom: 8px; 
+                  @media screen and (max-width: 1200px) {
+                    padding-bottom: 8px;
                   }
                 }
-                &.GradeDetailsTableHeading{
+                &.GradeDetailsTableHeading {
                   padding: 30px 0 8px 0;
-                  @media screen and (max-width:1200px) {
-                    padding: 15px 0 4px 0; 
+                  @media screen and (max-width: 1200px) {
+                    padding: 15px 0 4px 0;
                   }
                 }
-                &.GradeDetailsTableHeadingChange{
+                &.GradeDetailsTableHeadingChange {
                   padding: 30px 0 16px 0;
-                  @media screen and (max-width:1200px) {
-                    padding: 15px 0 8px 0; 
+                  @media screen and (max-width: 1200px) {
+                    padding: 15px 0 8px 0;
                   }
                 }
                 .tableData1 {
                   padding: 0 24px 0 12px;
                 }
-                td{
-                  .TableRowSvg{
+                td {
+                  .TableRowSvg {
                     background-color: transparent;
                     height: 24px;
                     width: 24px;
-                  } 
+                  }
                 }
               }
             }
@@ -1035,6 +1206,9 @@ input[type="number"] {
           padding-top: 3px;
           @media screen and (max-width: 1200px) {
             padding-right: 20px;
+          }
+          @media screen and (min-height: 768px) {
+            height: 100%;
           }
 
           &::-webkit-scrollbar {
@@ -1070,52 +1244,52 @@ input[type="number"] {
       }
     }
   }
-  .GradeDetailFooter{
+  .GradeDetailFooter {
     max-width: 100%;
     border-radius: 30px;
-background: #B4D5DC;
-box-shadow: 0px 6px 51.2px 0px rgba(6, 8, 41, 0.38);
-display: flex;
-padding: 11px 30px;
-align-items: center;
-justify-content: space-between;
-@media screen and (max-width:1200px){
-  padding: 8px 20px;
-}
-.detailFooterSvg{
-  height: 33px;
-  width: 33px;
-  background-color: #060829;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.DetailFooterSection{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  span{
+    background: #b4d5dc;
+    box-shadow: 0px 6px 51.2px 0px rgba(6, 8, 41, 0.38);
     display: flex;
-    gap: 30px;
-  }
-  h2{
-    color: #060829;
-    height: auto;
-    font-weight: 900;
-  }
-  .FooterSectionSpan1{
-    color: #0A1857;
-    font-weight: 800;
-  }
-  .FooterSectionSpan2{
-    h2{
-      font-size: 32px;
-      @media screen and (max-width:1200px){
-        font-size: 20px;
+    padding: 11px 30px;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 1200px) {
+      padding: 8px 20px;
+    }
+    .detailFooterSvg {
+      height: 33px;
+      width: 33px;
+      background-color: #060829;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .DetailFooterSection {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      span {
+        display: flex;
+        gap: 30px;
+      }
+      h2 {
+        color: #060829;
+        height: auto;
+        font-weight: 900;
+      }
+      .FooterSectionSpan1 {
+        color: #0a1857;
+        font-weight: 800;
+      }
+      .FooterSectionSpan2 {
+        h2 {
+          font-size: 32px;
+          @media screen and (max-width: 1200px) {
+            font-size: 20px;
+          }
+        }
       }
     }
-  }
-}
   }
 }
