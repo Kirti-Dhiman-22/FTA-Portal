@@ -679,12 +679,18 @@ input[type="number"] {
       display: flex;
       flex-direction: column;
       gap: 30px;
+      @media screen and (max-width:1200px) {
+        gap:15px;
+      }
     }
     .sideBarBottomSection {
       display: flex;
       flex-direction: column;
       gap: 16px;
       width: 100%;
+      @media screen and (max-width:1200px) {
+        gap:5px;
+      }
     }
   }
   .DashBoardInnerPage {
@@ -715,8 +721,8 @@ input[type="number"] {
       @media screen and (max-width: 1200px) {
         gap: 20px;
       }
-      @media screen and (min-height: 769px) {
-        height: calc(100vh - 180px);
+      @media screen and (min-height: 768px) {
+        height: calc(100vh - 135px);
       }
       @media screen and (min-width : 2360px) {
         height: calc(100vh - 265px);
@@ -782,8 +788,8 @@ input[type="number"] {
           padding: 10px 20px;
           gap: 30px;
         }
-        @media screen and (min-height: 769px) {
-          height: calc(100vh - 180px);
+        @media screen and (min-height: 768px) {
+          height: calc(100vh - 135px);
         }
         @media screen and (min-width:2360px) {
           padding: 30px 45px;
@@ -1045,7 +1051,7 @@ input[type="number"] {
             height: 100%;
           }
           @media screen and (max-width: 1200px) {
-            height: 500px;
+            height: 565px;
           }
         }
         .StudentContentBody {

@@ -790,11 +790,21 @@ input[type=number] {
   flex-direction: column;
   gap: 30px;
 }
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .sideBar .sideBarTopSection {
+    gap: 15px;
+  }
+}
 .DashBoardPage .sideBar .sideBarBottomSection {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .DashBoardPage .sideBar .sideBarBottomSection {
+    gap: 5px;
+  }
 }
 .DashBoardPage .DashBoardInnerPage {
   display: flex;
@@ -836,9 +846,9 @@ input[type=number] {
     gap: 20px;
   }
 }
-@media screen and (min-height: 769px) {
+@media screen and (min-height: 768px) {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 135px);
   }
 }
 @media screen and (min-width: 2360px) {
@@ -918,9 +928,9 @@ input[type=number] {
     gap: 30px;
   }
 }
-@media screen and (min-height: 769px) {
+@media screen and (min-height: 768px) {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 135px);
   }
 }
 @media screen and (min-width: 2360px) {
@@ -1231,7 +1241,7 @@ input[type=number] {
 }
 @media screen and (max-width: 1200px) {
   .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
-    height: 500px;
+    height: 565px;
   }
 }
 .DashBoardPage .DashBoardInnerPage .DashBoardPage1 .GradeInnerContent .StudentContentBody {
